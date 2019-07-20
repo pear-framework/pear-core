@@ -23,3 +23,7 @@ Main.Notify = function(...)
     table.remove(args, 1)
     TriggerClientEvent("pear-core:notify", source, args)
 end
+
+Main.CreateCallback = function(name, callback)
+    Main["Callbacks"][name] = callback
+end

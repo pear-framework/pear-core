@@ -23,3 +23,12 @@ Main.Log = function(...)
     TriggerServerEvent("pear-core:log", ...)
 end
 
+Main.Callback = function(...)
+    local args = { ... }
+    local name = args[1]
+    table.remove(args, 1)
+    
+    local uniqueId = Main.GetRandomString(32)
+
+    TriggerServerEvent("pear-core:callback", name, uniqueId)
+end
