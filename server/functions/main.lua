@@ -16,3 +16,10 @@ Main.Log = function(...)
 end
 
 Main.Log("Initiated.")
+
+Main.Notify = function(...)
+    local args = { ... }
+    local source = args[1]
+    table.remove(args, 1)
+    TriggerClientEvent("pear-core:Notify", source, args)
+end
