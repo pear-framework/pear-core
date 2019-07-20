@@ -6,6 +6,7 @@ Main.Connected = function()
         Citizen.Wait(5)
         
         if NetworkIsSessionStarted() then
+            print("spawned")
             TriggerServerEvent("playerJoined")
             break
         end
@@ -17,4 +18,8 @@ Main.Notify = function(...)
     SetNotificationTextEntry('STRING')
     AddTextComponentSubstringPlayerName(message)
     DrawNotification(false, true)
+end
+
+Main.Log = function(...)
+    TriggerServerEvent("pear-core:log", ...)
 end

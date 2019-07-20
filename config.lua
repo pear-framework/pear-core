@@ -1,3 +1,4 @@
-Config = {
-    Debug = true
-}
+Config = {}
+
+Config.Debug = true -- Enables debugging
+
