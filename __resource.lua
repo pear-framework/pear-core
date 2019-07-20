@@ -14,6 +14,8 @@ server_scripts {
 
 	"server/functions/main.lua",
 
+	"shared/main.lua",
+
 	"server/user/user.lua",
 	"server/user/functions.lua"
 }
@@ -21,9 +23,12 @@ server_scripts {
 client_scripts {
 	"config.lua",
 
+	
 	"client/main.lua",
 	"client/functions/main.lua",
-	"client/functions/user.lua"
+	"client/functions/user.lua",
+
+	"shared/main.lua"
 }
 
 exports {

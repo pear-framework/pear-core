@@ -1,10 +1,10 @@
 Main = {}
-Main.callbacks = {}
+Main.Callbacks = {}
 
 RegisterNetEvent("pear-core:userLoaded")
 AddEventHandler("pear-core:userLoaded", function(data)
-    User = data
-    User.Loaded = true
+    Main.User = data
+    Main.User.Loaded = true
     ShutdownLoadingScreen()
     ShutdownLoadingScreenNui()
 end)
@@ -20,6 +20,6 @@ end)
 
 RegisterNetEvent("pear-core:callback")
 AddEventHandler("pear-core:callback", function(uniqueId, ...)
-    Main["callbacks"][uniqueId](...)
-    Main["callbacks"][uniqueId] = nil
+    Main["Callbacks"][uniqueId](...)
+    Main["Callbacks"][uniqueId] = nil
 end)

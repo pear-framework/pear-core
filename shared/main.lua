@@ -2,9 +2,9 @@ FetchMain = function()
     return Main
 end
 
-FetchUser = function()
-    return User
-end
+-- FetchUser = function()
+--     return User
+-- end
  
 UpdateUser = function(response)
     if response and response["table"] and response["data"] then
@@ -28,7 +28,7 @@ Main.TableToString = function(...)
     return msgString
 end
 
-Main.RandomString = function(count)
+Main.GetRandomString = function(count)
     if count < 1 then return nil end
     local s = ""
     for i = 1, count do

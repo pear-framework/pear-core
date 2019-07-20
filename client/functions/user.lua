@@ -1,2 +1,2 @@
-User = {}
-User.Loaded = false
+Main.User = {}
+Main.User.Loaded = false

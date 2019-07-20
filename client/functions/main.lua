@@ -3,10 +3,11 @@ Main.Connected = function()
 
     while true do
         Citizen.Wait(5)
-        
+
         if NetworkIsSessionStarted() then
-            print("spawned")
             TriggerServerEvent("playerJoined")
+
+            exports["spawnmanager"]:spawnPlayer()
             break
         end
     end
@@ -26,9 +27,12 @@ end
 Main.Callback = function(...)
     local args = { ... }
     local name = args[1]
+    local callback = args[2]
     table.remove(args, 1)
     
     local uniqueId = Main.GetRandomString(32)
+
+    Main["Callbacks"][uniqueId] = callback
 
     TriggerServerEvent("pear-core:callback", name, uniqueId)
 end
