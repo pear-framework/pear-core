@@ -23,8 +23,9 @@ Main.Callback = function(name, id, source, callback, ...)
         Main.Log("The callback: ", name, " does not exist!")
     end
 end
+
 RegisterServerEvent("pear-core:callback")
-AddEventHandler("pear-core:callback", function(name, id)
+AddEventHandler("pear-core:callback", function(name, id, ...)
     Main.Callback(name, id, source, function(...)
         TriggerClientEvent("pear-core:callback", source, id, ...)
     end, ...)
