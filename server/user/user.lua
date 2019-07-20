@@ -43,6 +43,8 @@ playerJoined = function(source)
         if rowsChanged > 0 then
             Main.Log("Successfully updated player", playerData["name"], "with data", json.encode(playerData))
 
+            Main.Users[source] = playerData
+
             TriggerClientEvent("pear-core:userLoaded", source, playerData)
         end
     end)
@@ -50,4 +52,8 @@ end
 
 playerDropped = function(source, reason)
     Main.Log(GetPlayerName(source), "Just dropped because of", reason)
+
+    if Main.Users[source] then
+        Main.Users[source] = nil
+    end
 end
