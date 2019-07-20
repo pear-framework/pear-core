@@ -5,6 +5,12 @@ end
 FetchUser = function()
     return User
 end
+ 
+UpdateUser = function(response)
+    if response and response["table"] and response["data"] then
+        User[response["table"]] = response["data"]
+    end
+end
 
 Main.TableToString = function(...)
     local text = { ... }

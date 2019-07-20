@@ -25,3 +25,15 @@ client_scripts {
 	"client/functions/main.lua",
 	"client/functions/user.lua"
 }
+
+exports {
+	"UpdateUser",
+	"FetchUser",
+	"FetchMain"
+}
+
+server_exports {
+	"UpdateUser",
+	"FetchUser",
+	"FetchMain"
+}

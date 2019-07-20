@@ -1,7 +1,6 @@
 Main.Connected = function()
-    ShutdownLoadingScreen()
-    ShutdownLoadingScreenNui()
-    
+    SetManualShutdownLoadingScreenNui(true)
+
     while true do
         Citizen.Wait(5)
         
@@ -23,3 +22,4 @@ end
 Main.Log = function(...)
     TriggerServerEvent("pear-core:log", ...)
 end
+

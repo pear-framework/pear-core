@@ -4,6 +4,8 @@ RegisterNetEvent("pear-core:userLoaded")
 AddEventHandler("pear-core:userLoaded", function(data)
     User = data
     User.Loaded = true
+    ShutdownLoadingScreen()
+    ShutdownLoadingScreenNui()
 end)
 
 Citizen.CreateThread(function()
