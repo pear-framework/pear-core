@@ -14,13 +14,14 @@ server_scripts {
 
 	"server/functions/main.lua",
 
-	"server/user/functions.lua",
-	"server/user/user.lua"
+	"server/user/user.lua",
+	"server/user/functions.lua"
 }
 
 client_scripts {
 	"config.lua",
 
 	"client/main.lua",
-	"client/functions.lua"
+	"client/functions/main.lua",
+	"client/functions/user.lua"
 }

@@ -6,7 +6,9 @@ AddEventHandler("pear-core:userLoaded", function(data)
     User.Loaded = true
 end)
 
-Citizen.CreateThread(Connected)
+Citizen.CreateThread(function()
+    Main.Connected()
+end)
 
 RegisterNetEvent("pear-core:notify")
 AddEventHandler("pear-core:notify", function(...)

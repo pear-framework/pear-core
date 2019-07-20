@@ -1,5 +1,7 @@
 RegisterServerEvent("playerJoined")
 
 AddEventHandler("playerConnecting", playerConnecting)
-AddEventHandler("playerJoined", playerJoined)
+AddEventHandler("playerJoined", function()
+    playerJoined(source)
+end)
 AddEventHandler("playerDropped", playerDropped)
