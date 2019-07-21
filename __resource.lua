@@ -27,6 +27,8 @@ client_scripts {
 	"client/main.lua",
 	"client/functions/main.lua",
 	"client/functions/user.lua",
+	"client/functions/game.lua",
+
 
 	"shared/main.lua"
 }

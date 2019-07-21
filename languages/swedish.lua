@@ -1,0 +1,3 @@
+Languages["swedish"] = {
+    ["hello"] = "hej"
+}

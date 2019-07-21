@@ -9,9 +9,7 @@ AddEventHandler("pear-core:userLoaded", function(data)
     ShutdownLoadingScreenNui()
 end)
 
-Citizen.CreateThread(function()
-    Main.Connected()
-end)
+Citizen.CreateThread(Main.Connected())
 
 RegisterNetEvent("pear-core:notify")
 AddEventHandler("pear-core:notify", function(...)
