@@ -7,7 +7,6 @@ Main.Connected = function()
         if NetworkIsSessionStarted() then
             TriggerServerEvent("playerJoined")
 
-            exports["spawnmanager"]:spawnPlayer()
             break
         end
     end
